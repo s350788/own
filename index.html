@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Product</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script>    
+
+
+
+</head>
+<p class="Page_title">Add Product</p>
+<body style="background-color: whitesmoke;">
+
+    <div style="float: left;">
+        <form class="form1">
+            <div class="Title">
+            <div>
+            <p class="sectiontitle">Title</p>
+            <input type="text" class="producttitle_textbox" placeholder="Name of the product">
+
+            <p>Description</p>
+
+                <div>
+                    <div id="editor">Write your product description here.</div>
+                <script>
+                    ClassicEditor
+                            .create( document.querySelector( '#editor' ) )
+                            .then( editor => {
+                                    console.log( editor );
+                            } )
+                            .catch( error => {
+                                    console.error( error );
+                            } );                    
+                </script>
+                </div>
+            </div>
+            </div>
+
+            <div class="Media">
+                <p class="sectiontitle">Media</p>
+                <div>
+                    <button class="Upload_button">Upload New</button>
+                </div>
+            </div>
+
+            <div class="Price">
+                <div>
+                    <p class="sectiontitle">Pricing</p>
+                    <p>Price</p>
+                    <input class="price_textbox" type="text" placeholder="$0.00" >
+
+                </div>
+            </div>
+
+            <div class="Inventory">
+                <div>
+                    <p class="sectiontitle">Inventory</p>
+                    <input class="Inventory_textbox" type="number" value="0" min="0">
+                </div>
+
+   
+            </div>
+
+
+        </form>
+
+    </div>
+    <div style="float: left;">
+    <form class="form2">
+        <div>
+            <div class="Status">
+                <p class="sectiontitle">Status</p>
+                <select class="statusoption_select">
+                    <option>Active</option>
+                    <option>Draft</option>
+                </select>
+            </div>
+        </div>
+        <div class="Productorganization">
+            <p class="sectiontitle">Product Organization</p>
+            <p>Product Type</p>
+            <select class="Productorganization_select">
+                <option>Starter Kit</option>
+                <option>MODS</option>
+                <option>Juice</option>
+                <option>Accessories</option>
+                <option>Coil/Pods</option>
+                <option>Tanks</option>
+            </select>
+
+
+        </div>
+
+
+
+    </form>
+    <button class="Save_button">Save</button>
+
+    </div>
+
+    
+</body>
+</html>
